@@ -1,0 +1,186 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Ubuntu;
+}
+.my_navbar{
+    font-family: Ubuntu;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    padding: 1em;
+    transition: all 0.3s ease;
+    background: #216363;
+    box-shadow: 0 1px 10px 5px rgba(0, 0, 0, 0.1);
+}
+.my_navbar .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav_logo{
+    width: 50px;
+    transition: 0.3s;
+}
+.nav_logo:hover{
+    transform: scale(1.2);
+}
+.my_navbar .menu-list{
+    display: inline-flex;
+    gap: 40px;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.menu-list li{
+    list-style: none;
+}
+.menu-list li a{
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.icon{
+    display: none;
+    color: white;
+}
+.icon.cancel-btn{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+section{
+    width: 100%;
+    font-family: Ubuntu;
+}
+#section-1{
+    padding-top: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    background: #216363;
+    color: white;
+    font-family: Ubuntu;
+    line-height: 18px;
+}
+footer a, footer ul{
+    text-decoration: none;
+    color: white;
+    list-style: none;
+}
+footer .content{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer .content h3{
+    color: rgb(68, 240, 154);
+    font-size: 175%;
+    margin-bottom: 10px;
+}
+footer .info li{
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    margin-bottom: 10px;
+    margin-left: -30px;
+    font-size: 115%;
+}
+footer .social .icons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer .social .icons a{
+    font-size: 200%;
+    transition: 0.5s;
+}
+footer .social .facebook:hover{
+    color: rgb(63, 109, 194);
+}
+footer .social .twitter:hover{
+    color: rgb(52, 123, 255);
+}
+footer .social .telegram:hover{
+    color: rgb(18, 232, 247);
+}
+footer .social .youtube:hover{
+    color: rgb(255, 0, 0);
+}
+.copyright{
+    text-align: center;
+    background: #216363;
+    color: white;
+    font-family: Ubuntu;
+}
+#delete{
+    height: 0vh;
+}
+@media (max-width: 768px){
+    body.disabled{
+        overflow: hidden;
+    }
+    .icon{
+        display: block;
+    }
+    .icon.hide{
+        display: none;
+    }
+    .my_navbar .content{
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+    .my_navbar .menu-list{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+        background: #216363;
+        transition: all 0.3s ease;
+    }
+    .my_navbar.show .menu-list{
+        left: 0;
+    }
+    .my_navbar .menu-list li{
+        margin-top: 45px;
+    }
+    .my_navbar .menu-list li a{
+        font-size: 23px;
+        margin-left: -100%;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .my_navbar.show .menu-list li a{
+        margin-left: 0;
+    }
+
+    footer .content{
+        flex-direction: column;
+        gap: 30px;
+    }
+    footer .content h3{
+        text-align: center;
+        font-size: 150%;
+        margin-bottom: 10px;
+    }
+    footer .social .icons a{
+        font-size: 150%;
+        transition: 0.5s;
+    }
+}
+
+@media(max-width: 1024px){
+
+}
